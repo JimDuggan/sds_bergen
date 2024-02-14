@@ -1,0 +1,36 @@
+---
+title: "SDS Bergen Paper"
+abstract: "To be done...."
+author: " "
+affiliation: " "
+output: 
+  bookdown::pdf_document2:
+    template: plos_latex_template.tex
+    keep_tex: true
+    citation_package: natbib
+---
+
+# Test Heading
+
+
+
+## Sub-heading
+
+
+This is a cite [@DUGGAN2024343], [@chambers2008software].
+
+
+```{r, echo=TRUE,eval=FALSE}
+2 + 2
+```
+
+\newpage
+## Sub-heading
+
+
+This is a cite [@DUGGAN2024343], [@chambers2008software].
+
+
+```{r, echo=TRUE,eval=FALSE}
+2 + 2
+```

@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{DUGGAN2024343}
+Duggan J, Andrade J, Murphy TB, Gleeson JP, Walsh C, Nolan P.
+\newblock An age-cohort simulation model for generating COVID-19 scenarios: A
+  study from Ireland's pandemic response.
+\newblock European Journal of Operational Research. 2024;313(1):343--358.
+\newblock doi:{https://doi.org/10.1016/j.ejor.2023.08.011}.
+
+\bibitem{chambers2008software}
+Chambers JM.
+\newblock Software for Data Analysis: Programming with R. vol.~2.
+\newblock Springer; 2008.
+
+\end{thebibliography}
