@@ -212,7 +212,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="822" page_height="575" isee:page_rows="2" isee:scroll_y="141.111" zoom="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="822" page_height="575" isee:page_rows="2" isee:scroll_y="150" zoom="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -255,9 +255,9 @@
 				<stock label_side="center" x="378" y="263" name="E"/>
 				<stock label_side="center" x="560" y="263" name="I"/>
 				<stock label_side="center" x="777" y="263" name="R"/>
-				<stock label_side="center" x="560" y="366" name="H1"/>
-				<stock label_side="center" x="558.5" y="466" name="H2"/>
-				<stock label_side="center" x="557.75" y="564" name="H3"/>
+				<stock background="#00FDFF" label_side="center" x="560" y="366" name="H1"/>
+				<stock background="#00FDFF" label_side="center" x="558.5" y="466" name="H2"/>
+				<stock background="#00FDFF" label_side="center" x="557.75" y="564" name="H3"/>
 				<stock label_side="center" x="777" y="355" name="RH"/>
 				<stock label_side="center" x="777" y="452" name="D"/>
 				<flow x="280.5" y="261.5" name="IR">
@@ -320,7 +320,7 @@
 					<from>I</from>
 					<to>HR1</to>
 				</connector>
-				<connector uid="3" angle="339.444">
+				<connector uid="3" angle="322.021">
 					<from>E</from>
 					<to>ER</to>
 				</connector>
@@ -340,20 +340,20 @@
 					<from>H3</from>
 					<to>RRH</to>
 				</connector>
-				<aux x="427.5" y="227" name="Sigma Param"/>
-				<connector uid="8" angle="303.69">
+				<aux background="#00F900" x="498.389" y="294.111" name="Sigma Param"/>
+				<connector uid="8" angle="100.35">
 					<from>Sigma_Param</from>
 					<to>ER</to>
 				</connector>
-				<aux x="661" y="203" name="Gamma Param"/>
-				<aux x="417" y="170" name="Beta Param"/>
-				<aux x="243.5" y="192.5" name="N"/>
-				<aux x="299.5" y="206" name="Lambda"/>
-				<connector uid="11" angle="331.477">
+				<aux background="#00F900" x="661" y="203" name="Gamma Param"/>
+				<aux background="#942192" x="417" y="170" name="Beta Param"/>
+				<aux x="341.278" y="181.389" name="N"/>
+				<aux x="378" y="203" name="Lambda"/>
+				<connector uid="11" angle="320.219">
 					<from>S</from>
 					<to>IR</to>
 				</connector>
-				<connector uid="12" angle="223.452">
+				<connector uid="12" angle="194.664">
 					<from>Lambda</from>
 					<to>IR</to>
 				</connector>
@@ -361,19 +361,19 @@
 					<from>Beta_Param</from>
 					<to>Lambda</to>
 				</connector>
-				<connector uid="15" angle="346.446">
+				<connector uid="15" angle="329.523">
 					<from>N</from>
 					<to>Lambda</to>
 				</connector>
-				<stock label_side="center" x="367.5" y="395" name="TC"/>
+				<stock background="#FF9300" label_side="center" x="367.5" y="395" name="TC"/>
 				<flow x="371" y="342.75" name="TCI">
 					<pts>
 						<pt x="371" y="308"/>
 						<pt x="371" y="377.5"/>
 					</pts>
 				</flow>
-				<aux x="455.5" y="368.5" name="CF"/>
-				<connector uid="17" angle="172.405">
+				<aux background="#942192" x="455.5" y="366" name="CF"/>
+				<connector uid="17" angle="164.616">
 					<from>CF</from>
 					<to>TCI</to>
 				</connector>
@@ -381,7 +381,7 @@
 					<from>ER</from>
 					<to>TCI</to>
 				</connector>
-				<aux x="634" y="320" name="HF"/>
+				<aux background="#942192" x="634" y="320" name="HF"/>
 				<connector uid="19" angle="171.167">
 					<from>HF</from>
 					<to>HR1</to>
@@ -406,8 +406,8 @@
 					<from>Gamma_Param</from>
 					<to>HR1</to>
 				</connector>
-				<aux x="637" y="452" name="ALOS"/>
-				<stock label_side="center" x="365" y="547.5" name="TH"/>
+				<aux background="#00F900" x="637" y="452" name="ALOS"/>
+				<stock background="#FF9300" label_side="center" x="365" y="547.5" name="TH"/>
 				<flow x="365.5" y="494.5" name="THI">
 					<pts>
 						<pt x="365.5" y="459"/>
@@ -434,7 +434,7 @@
 					<from>ALOS</from>
 					<to>RRD</to>
 				</connector>
-				<aux x="707.25" y="494.5" name="DF"/>
+				<aux background="#942192" x="707.25" y="494.5" name="DF"/>
 				<connector uid="30" angle="79.0841">
 					<from>DF</from>
 					<to>RRH</to>
@@ -443,7 +443,7 @@
 					<from>DF</from>
 					<to>RRD</to>
 				</connector>
-				<stock label_side="center" x="463" y="468" name="TD"/>
+				<stock background="#FF9300" label_side="center" x="463" y="468" name="TD"/>
 				<flow x="462" y="521.25" name="TDI">
 					<pts>
 						<pt x="462" y="557"/>
@@ -454,16 +454,12 @@
 					<from>RRD</from>
 					<to>TDI</to>
 				</connector>
-				<connector uid="33" angle="149.826">
-					<from>I</from>
-					<to>Lambda</to>
-				</connector>
 				<aux x="619" y="401.5" name="TIH"/>
 				<connector uid="34" angle="351.209">
 					<from>H1</from>
 					<to>TIH</to>
 				</connector>
-				<connector uid="35" angle="43.4926">
+				<connector uid="35" angle="46.8328">
 					<from>H2</from>
 					<to>TIH</to>
 				</connector>
@@ -538,10 +534,10 @@
 					</from>
 					<to>Checksum</to>
 				</connector>
-				<aux x="262.5" y="376.5" name="Cases"/>
-				<aux x="235" y="439.5" name="Hospitalisations"/>
-				<aux x="235" y="509" name="Deaths"/>
-				<stacked_container uid="55" x="462" y="564" minimized="true">
+				<aux x="65.2778" y="571.5" name="Cases"/>
+				<aux x="37.7778" y="634.5" name="Hospitalisations"/>
+				<aux x="37.7778" y="704" name="Deaths"/>
+				<stacked_container uid="55" x="112.556" y="640.111" width="350" height="250" minimized="true">
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="TC"/>
@@ -551,6 +547,11 @@
 						</plot>
 					</graph>
 				</stacked_container>
+				<connector uid="33" angle="149.826">
+					<from>I</from>
+					<to>Lambda</to>
+				</connector>
+				<isee:loop_indicator color="#FF2600" font_size="8pt" text="R" orientation="counter_clockwise" uid="56" x="380" y="215.5" width="99.3889" height="30"/>
 				<alias font_style="italic" uid="40" x="15" y="412.5" width="16" height="16.5">
 					<of>S</of>
 				</alias>

@@ -7,8 +7,10 @@ library(ggplotify)
 source("R/03 analyse/Get Pairwise.R")
 
 res <- pmap(list(fits$Epoch,fits$IndCode,fits$Params),~{
-   get_pair_wise(..3[,-1],paste0("Ep ",..1," D=",..2))
+   get_pair_wise(..3[,-(1:3)],paste0("Ep ",..1," D=",..2))
 })
+
+
 
 
 cors <- pmap(list(fits$Epoch,fits$IndCode,fits$Params),~{

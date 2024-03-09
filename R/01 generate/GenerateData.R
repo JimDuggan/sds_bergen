@@ -8,7 +8,7 @@ library(tidyr)
 library(openxlsx)
 
 # Load the Stella file containing the model.
-model_path <- "models/SEIRH.stmx"
+model_path <- "models/SEIRH_Beta.stmx"
 mdl        <- read_xmile(model_path)
 
 # Check the stocks
@@ -36,7 +36,7 @@ syn <- sd_measurements(n_meas       = 1,
 # Plot the synthetic data
 ggplot(syn, aes(time, measurement,colour=var_name)) +
   geom_point(colour = "#7B92DC") +geom_line()+
-  facet_wrap(~var_name,scales = "free",ncol=1)+
+  facet_wrap(~var_name,scales = "free",ncol=3)+
   labs(x = "Day", y = "People per day") +
   theme_classic()
 

@@ -78,6 +78,7 @@
 % amsmath and amssymb packages, useful for mathematical formulas and symbols
 \usepackage{amsmath,amssymb}
 
+
 % Use adjustwidth environment to exceed column width (see example table in text)
 \usepackage{changepage}
 
@@ -126,7 +127,8 @@
 %\doublespacing
 
 % Text layout
-\raggedright
+
+%\raggedright
 \setlength{\parindent}{0.5cm}
 \textwidth 5.25in 
 \textheight 8.75in
@@ -185,10 +187,10 @@ $endif$
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
-% $author$\textsuperscript{1\ddag}\textsuperscript{\textpilcrow}
-% \\
-% \bigskip
-% \textbf{1} Affiliation Dept/Program/Center, Institution Name, City, State, Country
+$author$\textsuperscript{1}
+\\
+\bigskip
+\textbf{1} School of Computer Science, University of Galway, Galway, Ireland.
 % \\
 % \textbf{2} Affiliation Dept/Program/Center, Institution Name, City, State, Country
 % \\

@@ -3,6 +3,7 @@ library(dplyr)
 library(tidyr)
 library(purrr)
 library(ggplotify)
+library(ggpubr)
 
 p_convs <- fits %>%
             select(ExpNumber,Epoch,IndCode,EpIndCode,Params) %>%

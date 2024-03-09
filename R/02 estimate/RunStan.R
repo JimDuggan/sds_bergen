@@ -37,13 +37,17 @@ exp <- exp %>%
                                           Indicators = ..3,
                                           data       = ..4,
                                           meas_model = ..5)
+                           diagnostic      <- f$cmdstan_diagnose()
+                           diagnostic_summ <- f$diagnostic_summary()
                            finish_time <- get_stamp()
                            config$RUN_INFO[[..1]] <<- list(ExpNo=..1,
                                                            Indicators=..2,
                                                            Obs=nrow(..3),
                                                            Start_Time=start_time,
                                                            Finish_Time=finish_time,
-                                                           Duration=Sys.time()-t1)
+                                                           Duration=Sys.time()-t1,
+                                                           Diagnostic=diagnostic,
+                                                           Diagnostic_Summary=diagnostic_summ)
                            f
         }))
 

@@ -70,15 +70,16 @@ sp_oa <- oa %>%
             Min=min(Overlap),
             Max=max(Overlap))
 
-p <- ggplot(sp_oa,aes(x=To,y=From,fill=Mean))+geom_tile()+
+target <- "HF"
+p <- ggplot(filter(sp_oa,Param==target),aes(x=To,y=From,fill=Mean))+geom_tile()+
   scale_fill_gradient2(midpoint = 0.5,mid="grey70",limits=c(0,1))+
   geom_text(aes(To, From, label=Mean), size=3,colour = "white", check_overlap = TRUE)+
   theme(legend.position = "top",
         axis.text.x = element_text(angle = 45,hjust = 1),
         panel.background = element_rect(fill="white"),
         panel.grid=element_line(colour="grey",linetype=3,linewidth = 0.3))+
-  labs(fill="Mean overlap estimate")+
-  facet_wrap(~Param)
+  labs(fill="Mean overlap estimate",
+       subtitle=paste0("Parameter = ",target))
 
 
 # Plot histograms to show the overlaps

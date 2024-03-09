@@ -120,6 +120,7 @@ fit_model <- function(XMILE_FILE,
   
   print(glue("Sampling completed at time {lubridate::as_datetime(Sys.time())}..."))
   
+  
   fit
   
 }

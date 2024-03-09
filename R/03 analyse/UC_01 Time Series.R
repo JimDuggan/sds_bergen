@@ -45,6 +45,6 @@ plots <- map2(targets$Epoch,targets$Indicators,~{
            .x)
 })
 
-p1 <- ggarrange(plotlist = plots)
+p1 <- ggarrange(plots[[1]],plots[[2]],plots[[7]],plots[[36]])
 
 
