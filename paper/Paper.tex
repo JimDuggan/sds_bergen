@@ -170,6 +170,46 @@
 
 %% END MACROS SECTION
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
 \usepackage[numbers]{natbib}
 \bibliographystyle{plos2015.bst}
@@ -179,7 +219,7 @@
 % Title must be 250 characters or less.
 \begin{flushleft}
 {\Large
-\textbf\newline{An Exploratory Evaluation into the Effect of Data Availability and Indictator Coverage on Parameter Estimates using Hamiltonian Monte Carlo} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+\textbf\newline{An Exploratory Evaluation into the Effect of Data Availability and Indicator Coverage on Parameter Estimates using Hamiltonian Monte Carlo} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 }
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
@@ -223,7 +263,7 @@ Jim Duggan\textsuperscript{1}
 \end{flushleft}
 % Please keep the abstract below 300 words
 \section*{Abstract}
-There are typically two important questions addressed via the model calibration process: (1) does the time series of the fitted model match to the historical data; and (2) can reliable parameter estimates be inferred that are bounded within credible intervals. The evolution of Markov Chain Monte Carlo (MCMC) methods provide powerful methodological and computational frameworks for parameter estimation, and recent studies confirm the value of the Hamiltonian Monte Carlo approach for system dynamics models. This paper addresses an important research question for the calibration process, namely: what is the impact of data availability and indicator coverage on parameter estimation. It presents a 3 x 7 factorial study based on an SEIR model with hospitalisations and deaths. An extensive exploratory analysis is presented, and the highlights differences for a number of posterior distributions calculated, depending on the data availablity, and the set of indicators.
+There are typically two important questions addressed via the model calibration process: (1) does the time series of the fitted model match to the historical data; and (2) can reliable parameter estimates be inferred that are bounded within credible intervals. The evolution of Markov Chain Monte Carlo (MCMC) methods provide powerful methodological and computational frameworks for parameter estimation, and recent studies confirm the value of the Hamiltonian Monte Carlo approach for system dynamics models. This paper addresses an important research question for the calibration process, namely: what is the impact of data availability and indicator coverage on parameter estimation. It presents a 3 x 7 factorial study based on an SEIR model with cases, hospitalisations, and deaths. An exploratory analysis is presented, where all models converge. Our results highlight differences for a number of posterior distributions calculated, depending on the data availablity, and the set of indicators used.
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -238,24 +278,38 @@ There are typically two important questions addressed via the model calibration 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Contributions
+In system dynamics, models must be grounded in data if modellers are to provide reliable advice to decision makers, and as part of this, robust parameter and confidence interval estimation is crucial \citep{struben2015parameter}. There are a number of computational methods that can be used to fit models and estimate parameters. These include: (1) the use of numerical optimisation combined with bootstrapping for confidence interval estimation and hypothesis testing in system dynamics models \citep{https://doi.org/10.1002/sdr.362}; and (2) Markov chain Monte Carlo (MCMC) approaches to estimate the posterior distribution for parameters, a statistical approach that has gained significant adoption in the system dynamics community in recent years \citep{https://doi.org/10.1002/sdr.1501, osgood2015combining, https://doi.org/10.1002/sdr.1693, ANDRADE2020100415, doi:10.1098/rsos.230515, https://doi.org/10.1002/sdr.1673, 10.1371/journal.pcbi.1010100}.
 
-Three indicator model SEIR simple model
+Our approach in the paper is to fit an SEIR model (based on synthetic data) using Hamiltonian Monte Carlo (HMC) \citep{https://doi.org/10.1002/sdr.1693}, in order to gain insights into the how the availability of data (through epochs and indicators) impacts the overall credible intervals ranges for model parameters. Our choice of the three indicators is motivated by the benefits of having more than one indicator to calibrate a model, for example, to help migitate against reporting biases that would be a factor in real-world implemntations \citep{PolicyEPI}.
 
-Overall pipeline for efficiently processing inference results
+As part of our analysis we also introduce a new evaluation method for comparing posterior distributions, known as overlapping, and this provides useful insights into the sensitivity of parameter estimation to the availability of data.
 
-Use of a new method (overlapping analysis) to measure differences in parameter estimates
+The structure of the paper is as follows:
+
+\begin{itemize}
+\item
+  We introduce the SEIR model structure and overall experimental design, which involves 21 experiments;
+\item
+  We present an open-source computational framework, mainly written in R, and also using the Stan HMC package;
+\item
+  We present a detailed set of results, including: convergence tests, model fits, descriptive summaries of fits; 95\% quantile analysis; and, overlapping analysis for all 21 experiments.
+\item
+  The appendices include: (1) a sample stan file for inference of cases, hospitalisations, and deaths; (2) the main script file for running experiments; (3) the configuration file for the experiments; and (4) the code comparing the posterior distributions.
+\end{itemize}
 
 \hypertarget{model-structure-and-experimental-design}{%
 \section{Model Structure and Experimental Design}\label{model-structure-and-experimental-design}}
 
+\hypertarget{model-structure}{%
+\subsection{Model Structure}\label{model-structure}}
+
 The model used is an extension the well-known deterministic SEIR structure \citep{vynnycky2010introduction}, and is shown in Figure \ref{fig:mod-seir}. People start out as being susceptible to a novel pathogen, and with the introduction of \emph{patient zero} to the infectious (I) stock, the contagion loop is activated. People then move to an exposed (E) stock, where they do not contribute to the force of infection (\(\lambda\)), before entering an infectious state. Once in an infectious state people contribute to the force of infection (\(\lambda\)), before exiting via a first order exponential delay structure. A certain proportion of those infected have symptoms (clinical fraction), and a proportion of infectious are hospitalised, while the remainder recover. Hospitalisation is modelled as a third order delay structure, and 90\% of those hospitalised recover, while 10\% do not and move to the deaths stock (D). Three stocks (TC, TH, and TD) are used to record the cumulative numbers of cases, hospitalisations, and deaths.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/SEIR} \caption{An SEIR Influenza Model with Hospitalisations and Deaths}\label{fig:mod-seir}
+\includegraphics[width=0.85\linewidth]{diagrams/SEIR} \caption{An SEIR Influenza Model with Hospitalisations and Deaths}\label{fig:mod-seir}
 \end{figure}
 
-Equations (1-4) for the main SEIR structure are shown below. The parameters \(\sigma\) and \(\gamma\) represent the inverse of the latent and infectious delays, \(c\) is the clinical fraction, and \(h\) is the hospitalisation fraction. The model assumes that only those who show symptoms can end up in the hospital stream. The force of infection \(\lambda\) is calculated based on product of the effective contact rate (\(\beta\)) with the number of infectious (\(I\)), divided by the total population (\(N\)).
+Equations (1-6) for the main SEIR structure are shown below. The parameters \(\sigma\) and \(\gamma\) represent the inverse of the latent and infectious delays, \(c\) is the clinical fraction, and \(h\) is the hospitalisation fraction. The model assumes that only those who show symptoms can end up in the hospital stream. The force of infection \(\lambda\) is calculated based on product of the effective contact rate (\(\beta\)) with the number of infectious (\(I\)), divided by the total population (\(N\)).
 
 \begin{align*}
 \dot{S}      & = - \lambda S & (1) \\
@@ -278,7 +332,7 @@ L_{1} = L_{2} = L_{3}     & = \frac{L}{3.0} & (12) \\
 L            & = 10 & (13) \\
 \end{align*}
 
-As part of the inference process, we need to generate rates for cases (14), hospitalisations (15), and deaths (16), and these numbers are recorded as cumulative (stock) values. The Stan file generated (via the package \texttt{readsdr}) will difference these values in order to compare the simulated model values with the (synthetic) data values as part of the likelihood calculations for the posterior distributions.
+As part of the inference process, we need to generate incidence rates for cases, hospitalisations, and deaths, and these numbers are initially recorded as cumulative (stock) values (14-16).
 
 \begin{align*}
 \dot{T_{C}}  & =  c\sigma E & (14) \\
@@ -286,14 +340,30 @@ As part of the inference process, we need to generate rates for cases (14), hosp
 \dot{T_{D}}  & =  d\frac{H_{3}}{L_{3}} &(16) \\
 \end{align*}
 
-Finally, we present the relevant model parameters for the experiments. Two of these are based on the literature relating to pandemic influenza \citep{vynnycky2008analyses}, and the remaining values are arbitrary choices used as part of the experimentation process. For example, four of these parameters (\(\beta\), \(c\), \(d\) and \(h\)) will be estimated as part of the inference process.
+The difference values are calculated as follows (17-19), and these values are then used as part of the data fitting process.
+
+\begin{align*}
+X_{C}(t+1)  & = T_{C}(t+1) - T_{C}(t)  &  (17)\\
+X_{H}(t+1)  & = T_{H}(t+1) - T_{H}(t)   & (18)\\
+X_{D}(t+1)  & = T_{D}(t+1) - T_{D}(t)   & (19)\\
+\end{align*}
+
+The statistical distributions (count data) used for the fitting process are shown in equations (20-22), and this is appropriate given that the synthetic data generated for the three indicators in based on the negative binomial distribution. Note that, depending on the experiment, a subset of these will be used.
+
+\begin{align*}
+Y_{C}  &  \sim Nbin(X_{C},\phi_{1})  &  (20) \\
+Y_{H}  &  \sim Nbin(X_{H},\phi_{2})  &  (21) \\
+Y_{D}  &  \sim Nbin(X_{D},\phi_{3})  &  (22) \\
+\end{align*}
+
+The model parameters for the experiments are shown below. Two of these are based on the literature relating to pandemic influenza \citep{vynnycky2008analyses}, and the remaining values are arbitrary choices used as part of the experimentation process. Four of these parameters (\(\beta\), \(c\), \(d\) and \(h\)) will be estimated as part of the MCMC inference process.
 
 \begin{center}  
 \begin{tabular}{ | l | c | c | l | l |} % you can change the dimension according to the spacing requirements  
 \hline  
 Name & Symbol & Value  & Units & Source \\ \hline  
-Latent Duration & $\sigma^{-1}$ & 2.0 & $Days$ & Vynnycky et al. [3]\\ \hline  
-Infectious Duration & $\gamma^{-1}$ & 2.0 & $Days$ & Vynnycky et al. [3]\\ \hline  
+Latent Duration & $\sigma^{-1}$ & 2.0 & $Days$ & Vynnycky et al. [12]\\ \hline  
+Infectious Duration & $\gamma^{-1}$ & 2.0 & $Days$ & Vynnycky et al. [12]\\ \hline  
 Effective Contact Rate & $\beta$ & 1.0 & $Days^{-1}$ & Model estimate\\ \hline  
 Clinical Fraction (CF)& $c$ & 0.60 & $Dimn$ & Model estimate\\ \hline  
 Death Fraction (DF) & $d$ & 0.10 & $Dimn$ & Model estimate\\ \hline 
@@ -302,10 +372,30 @@ Average Length of Stay & $L$ & 10.0 & $Days$ & Model estimate\\ \hline
 \end{tabular}  
 \end{center}
 
+\hypertarget{experimental-design}{%
+\subsection{Experimental Design}\label{experimental-design}}
+
+The overall aim of the experimental design is to explore the possible effect of data availability and indicator coverage on the fitting process. The SEIR model was run once, and synthetic data generated, as shown in Figure \ref{fig:sys-syn}. This synthetic data was based on the SEIR model values generated (17-19), and different levels of variation were introduced via the negative binomial dispersion parameter, where values of 10, 20 and 40 were used respectively for cases, hospitalisations, and deaths.
+
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{diagrams/sys_synthetic} \caption{Sample synthetic data generated for the experiments}\label{fig:sys-syn}
+\end{figure}
+
+With three data sets available, a factorial-type set of experiments was designed based on:
+
+\begin{itemize}
+\item
+  Three epochs of equal length, one for the start of the epidemic, one for the middle duration, and one for the end. These are shown on the figure, and capture different dynamic phases (e.g.~exponential growth, inflection point, peak, and decline) for each indicator.
+\item
+  Seven combinations of indicators based on the indicators cases (C), hospitalisation (H), and deaths (D). This yielded the subsets: (CHD,CH,CD,HD,C,H,D).
+\end{itemize}
+
+The combination of epochs (3) and indicators (7) were then combined to run 21 experiments, which involve fitting the parameters to different data sources. The computation framework for this process is now described.
+
 \hypertarget{computational-framework}{%
 \section{Computational Framework}\label{computational-framework}}
 
-Figure \ref{fig:sys-design} captures the overall computational framework used to configure the experiments, generate the results, and produce the analysis. In order to execute this workflow, which is open-source and designed using R \citep{duggan2016system}, a number of additional components were required:
+Figure \ref{fig:sys-design} captures the overall computational framework used to configure the experiments, generate the results, and produce the analysis. In order to execute this workflow, which is open-source and designed using R \citep{duggan2016system, ExploreR}, a number of additional components were required:
 
 \begin{itemize}
 \item
@@ -319,28 +409,24 @@ Figure \ref{fig:sys-design} captures the overall computational framework used to
 \end{itemize}
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/sys_design} \caption{Overall data analytics framework for experiments}\label{fig:sys-design}
+\includegraphics[width=0.85\linewidth]{diagrams/sys_design} \caption{Overall framework for experiments}\label{fig:sys-design}
 \end{figure}
 
 The overall framework is divided into three main functions.
 
 \begin{itemize}
 \item
-  \textbf{Generate Synthetic Data}, which runs the SEIR model using the package \texttt{readsdr} for one instance, and is based on the differencing of the three indicator stocks (see equations 13-15). The negative binomial distribution is used to generate random count variables based on the model outputs. For this experiment, the dispersion parameters selected are (10, 20, 40) for (Cases, Hospitalisations, and Deaths). Sample output from this process is shown in Figure \ref{fig:sys-syn}.
+  \textbf{Generate Synthetic Data}, which runs the SEIR model using the package \texttt{readsdr} for one instance, and is based on the differencing of the three indicator stocks (see equations 13-15). The negative binomial distribution is used to generate random count variables based on the model outputs. For this experiment, the dispersion parameters selected are (10, 20, 40) for (Cases, Hospitalisations, and Deaths). A sample run from the synthetic data generation process is shown in Figure \ref{fig:sys-syn}.
 \item
-  \textbf{Estimate Parameters}, which performs the fitting process. For each experiment, this will (1) use \texttt{readsdr} to generate a stan file, (2) run the stan file using the \texttt{cmdstanr} interface, and (3) prepare and store all of the results in a single multidimensional data structure. This structure will contain one row for each experiment, and encapsulate variables such as the number of indictors, the measurement model, the data used for the calibration, the posterior samples for each parameter (4,000 each), the time series output for each model run, and the duration of the run. Given the computational resources needed to run the fitting, an advantage of storing all the results in a database (RDS file used) is that the analysis stage can be conducted at a later stage.
+  \textbf{Estimate Parameters}, which performs the fitting process. For each experiment, this will (1) use \texttt{readsdr} to generate a stan file, (2) run the stan file using the \texttt{cmdstanr} interface, and (3) prepare and store all of the results in a single multidimensional data structure. This structure will contain one row for each experiment, and encapsulate variables such as the number of indictors, the measurement model, the data used for the calibration, the posterior samples for each parameter (4,000 each), the time series output for each model run, and the duration of the run. Given the computational resources needed to run the fitting, an advantage of storing all the results in a database (RDS file used) is that the analysis stage can then be conducted independently.
 \item
   \textbf{Analyse Results}, which provides a number of scripts to generate a range of results to support analysis. These include: trace plots to explore convergence; time series showing the fits; boxplots highlighting the parameter distributions across all 21 experiments; quantile analysis to show the 95\% credible intervals from the inference process; and overlap analysis to provide insights into how close the posterior distributions are for each combination of epoch and indicator.
 \end{itemize}
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/sys_synthetic} \caption{Sample synthetic data generated for the experiments}\label{fig:sys-syn}
-\end{figure}
-
 The results are now presented in more detail.
 
-\hypertarget{experimental-results}{%
-\section{Experimental Results}\label{experimental-results}}
+\hypertarget{results}{%
+\section{Results}\label{results}}
 
 Overall, the inference process for the 21 experiments generates over 273MB of data, so there is a wide range of analysis that can be performed. Given that the overall goal is to explore possible differences in parameter estimates, our analysis comprises the following stages:
 
@@ -364,13 +450,13 @@ Our first analysis, capture in Figure \ref{fig:exp-conv}, displays the trace plo
 \item
   Experiments involving epoch one (the opening phase of the epidemic) typically have wider ranges, which is as expected, as there is less data available to inform the fitting process. For example, for the parameter \texttt{HF} (true value \(0.1\)), the values for \texttt{Epoch1-C} seem to cover the interval from 0 to 1.
 \item
-  Experiments where the three indicators were used tend to have narrower bands, which again is not surprising given that more information is available for the calibration process. Returning to parameter \texttt{HF}, we can see that its values for \texttt{Epoch1-CHD} remain much closer to the true value of \(0.1\).
+  Experiments where the three indicators were used tend to have narrower bands, which again is intuitive given that more information is available for the calibration process. Returning to parameter \texttt{HF}, we can see that its values for \texttt{Epoch1-CHD} remain much closer to the true value of \(0.1\).
 \end{itemize}
 
-A more detailed analysis of these parameter values will be explored through boxplots, quantile analysis and overallping analysis.
+A more detailed analysis of these parameter values will be explored through boxplots, quantile analysis and overlapping analysis.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_convergence} \caption{Exploring parameter convergence}\label{fig:exp-conv}
+\includegraphics[width=0.85\linewidth]{diagrams/exp_convergence} \caption{Exploring parameter convergence}\label{fig:exp-conv}
 \end{figure}
 
 \hypertarget{model-fits}{%
@@ -379,7 +465,7 @@ A more detailed analysis of these parameter values will be explored through boxp
 An important requirement for calibration is that the model provides a plausible representation of historical data, and in MCMC fitting we can also explore the time series quantiles returned as part of the posterior distribution. From a process perspective, having fits that align with historical data is needed to confirm that the model structure can generate the behaviour of interest, and these outputs also can be deployed as a confidence-building measure for modellers and clients. A sample of the fits are displayed in Figure \ref{fig:exp-fits}, for the indicators \emph{Cases} and \emph{Deaths}, across three of the epochs. The mean value from the MCMC samples is also shown, and overall, on visual inspection, these look like good fits to the data.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_fits} \caption{A sample of fits from the inference process (95\% CI)}\label{fig:exp-fits}
+\includegraphics[width=0.85\linewidth]{diagrams/exp_fits} \caption{A sample of fits from the inference process}\label{fig:exp-fits}
 \end{figure}
 
 An interesting aspect is what the fits do not show, which is the range of parameter values underling the generated time series. For example, if you take the set of plots in row 1 column 1 (epoch 1), and compare the fits for indicator \emph{C} and indicators \emph{CHD}, there is not an observable distinction between both, in that both fits look plausible. However, when we compare the parameters estimated for these two samples, differences emerge. This can first be explored using boxplots.
@@ -387,15 +473,22 @@ An interesting aspect is what the fits do not show, which is the range of parame
 \hypertarget{boxplots-of-parameter-estimates}{%
 \subsection{Boxplots of parameter estimates}\label{boxplots-of-parameter-estimates}}
 
-The boxplot is a valuable method to summarise data, as it shows the median, the interquartile range (IQR), the location of values 1.5 times above and below the 75th and 25th percentiles, and outliers. We use the boxplot as a means to compare parameter values from all 21 experiments, and estimated across (1) each of the three epochs and (2) all of the seven combinations of data indicators. The 84 boxplots are presented in Figure \ref{fig:exp-boxplots}.
+The boxplot is a valuable method to summarise data, as it shows the median, the interquartile range (IQR), the location of values 1.5 times above and below the 75th and 25th percentiles, and outliers. We use the boxplot as a means to compare parameter values from all 21 experiments, and estimated across (1) each of the three epochs and (2) all of the seven combinations of data indicators. The 84 boxplots are presented in Figure \ref{fig:exp-boxplots}. Our working assumption is that a narrower range indicates a more certain fit (the 95\% credible intervals are shown in the following section).
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_boxplots} \caption{Box plot analysis for parameters by epoch and indicator source(s)}\label{fig:exp-boxplots}
+\includegraphics[width=0.85\linewidth]{diagrams/exp_boxplots} \caption{Box plot analysis for parameters by epoch and indicator source(s)}\label{fig:exp-boxplots}
 \end{figure}
 
-We can observe a number of patterns from these descriptive statistics:
+We can initailly observe a number of patterns from these descriptive statistics:
 
-Why might this be the case? NArrow to expansive\ldots{} tipping point?
+\begin{itemize}
+\item
+  Across all parameters, the narrowest parameter estimate ranges seem to be those fits using the most indicators, and using the most data (i.e.~epoch 3).
+\item
+  The rate at which parameters ``lose their narrowness'' varies across both indicators, and epochs. For example, the parameter \(\beta\) within epoch 3 retains a narrow range for most indicator combinations, while the death fraction (DF) only retains a narrow range using three indicators across epoch 1 and 2.
+\item
+  Therefore, this highlights a difference depending on the epochs used, and the indicators. For example, for parameter \texttt{DF} with indicators \texttt{CHD}, there is a large difference in median and the overall spread of data across the three epochs.
+\end{itemize}
 
 \hypertarget{quantile-analyis-of-fitted-parameters}{%
 \subsection{Quantile analyis of fitted parameters}\label{quantile-analyis-of-fitted-parameters}}
@@ -403,34 +496,430 @@ Why might this be the case? NArrow to expansive\ldots{} tipping point?
 The plots displayed in the preceding section are useful to gain an overall appreciation of the posterior distributions, and to supplement that analysis, it is important to show the 95\% credible intervals. For the four parameters, this information is presented in Figure \ref{fig:exp-quants}, and arranged in descending order by the difference between the upper and lower quantiles.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_quants} \caption{Summary of quantiles for parameters across the 21 experiments.}\label{fig:exp-quants}
+\includegraphics[width=0.9\linewidth]{diagrams/exp_quants} \caption{Summary of quantiles for parameters across the 21 experiments.}\label{fig:exp-quants}
 \end{figure}
 
-A number of points can be made when reflecting on these results, and focusing on the first three records for each parameter (sorted in ascending order based on the narrowness of the credible interval):
+For each of the fitted parameters, we can make the following initial observations:
 
-\hypertarget{overlap-analysis-of-parameter-densities}{%
-\subsection{Overlap analysis of parameter densities}\label{overlap-analysis-of-parameter-densities}}
+\begin{itemize}
+\item
+  \emph{Beta\_Param}, which models the effective contact rate within the population model. The true value is 1.0, and many of the 95\% ranges contain this value. A shift in the range occurs for observation 14, and the experiment \texttt{Epoch1-CH}. From that point onwards, 7 of the 8 experiments relate to epoch 1, showing that epoch1 is prominent for fits with wider estimate ranges.
+\item
+  \emph{Clinical fraction (CF)}, which is the fraction of cases that are clinical, with a true value of 0.60. All of the estimates include this value, although a significant shift in the range happens with experiment 9 (\texttt{Epoch1-CHD}). Prior to that, of the eight experiments that have narrower bands, four are from epoch 2 and four from epoch 3. The four best are from epoch 3, which has the most data points used for the calibration process.
+\item
+  \emph{Hospitalisation fraction (HF)}, which is the fraction of cases hospitalised, with a true value of 0.10. All values contain the true value within their range, however, an observable widening of the range occurs from expertment 5 (\texttt{Epoch1-CHD}). Of the four experiments with the narrowest interval, two are from epoch 3, and two from epoch 2.
+\item
+  \emph{Death fraction (DF)}, which is the fraction of hospitalisations that die, with a true value of 0.10. Interestingly, the narrowest ranges (the first four experiments) do not cover the true value at the 2.5\% level, although the difference is small (e.g.~0.002 for \texttt{Epoch2-CHD}).
+\end{itemize}
 
-Disadvantage (scale)
+\hypertarget{overlapping-analysis-of-posterior-densities}{%
+\subsection{Overlapping analysis of posterior densities}\label{overlapping-analysis-of-posterior-densities}}
+
+Visual inspection of the parameter densities can be performed for each of the 21 experiments. The aim is to identify fitted parameters that have different posterior distributions, and explore possible reasons why this might be so. In Figure \ref{fig:exp-density-1} we explore the posterior densities for \(\beta\) and \(c\) (the clinical fraction). The original model parameter values are indicated by the dotted vertical lines, and the density plots are divided into three epochs. The purpose of these plots is to show the overall shape, however it should be noted that the scales on the x axis are different. For example, that parameter range for \emph{Beta\_Param} in epoch 3 is quite small, when compared to epochs 1 and 2. There seems to be more variation for the clinical fraction parameter with an epoch, and across the three epochs.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_density_b_cf} \caption{Visualizing a list of three elements}\label{fig:exp-density-1}
+\includegraphics[width=0.85\linewidth]{diagrams/exp_density_b_cf} \caption{Posterior density distributions for beta and the clinical fraction}\label{fig:exp-density-1}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_density_hf_df} \caption{Visualizing a list of three elements}\label{fig:exp-density-2}
+\includegraphics[width=0.85\linewidth]{diagrams/exp_density_hf_df} \caption{Posterior density distributions for hospitalisation and death fractions}\label{fig:exp-density-2}
 \end{figure}
+
+While the visual inspection method is a useful way to explore differences, more formal approaches can provide measurements to provide insights into the similarity between distributions. One such method is \emph{overlapping}, which deﬁned as the area intersected by two or more probability density functions \citep{10.3389/fpsyg.2019.01089}. The R package \texttt{overlapping} \citep{Pastore2018} is used to calculate this measure for each fitted parameter, with comparisons made between each of the 21 experiments. Output from an overlapping analysis of the parameter \(\beta\) is shown in Figure \ref{fig:exp-overlap-beta}.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_overlap_beta} \caption{Visualizing a list of three elements}\label{fig:exp-overlap-beta}
+\includegraphics[width=0.85\linewidth]{diagrams/exp_overlap_beta} \caption{Overlapping analysis for beta}\label{fig:exp-overlap-beta}
 \end{figure}
+
+While we already mentioned that the range for epoch 3 is quite narrow for \(\beta\) estimates, the data provided through this analysis is interesting. For example, the highest overlapping value (98\%) is between \texttt{Epoch1-CHD} and \texttt{Epoch1-CH}, where the only difference between these data sets is the used of the deaths indicator. In general, overlapping values of 90\% or higher are associated with data sets from similar epochs, which is a useful test of the fitting process.The lowest overlapping values are associated with \texttt{Epoch1-D}, which would have the lowest amount of data (one indicator with 33 data points).
+
+A second overlapping analysis for the hospitalisation fraction parameter is shown in Figure \ref{fig:exp-overlap-hf}, and these show a range of values from a high overlapping fraction of 99\% (\texttt{Epoch2-C} with \texttt{Epoch3-C}), and low values of 2\%, for example, between \texttt{Epoch3-CH} and \texttt{Epoch1-C}. If we take \texttt{Epoch3-CHD} as a plausible experiment where you would expect good estimations (given that it maximises the amount of data for calibration), it is interesting to see that only one other experiment has a high level of overlap, namely, \texttt{Epoch3-CH}.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{diagrams/exp_overlap_HF} \caption{Overlapping calculations for hospitalisation fraction (HF)}\label{fig:exp-overlap-hf}
+\includegraphics[width=0.85\linewidth]{diagrams/exp_overlap_HF} \caption{Overlapping analysis for hospitalisation fraction}\label{fig:exp-overlap-hf}
 \end{figure}
 
-\hypertarget{discussion}{%
-\section{Discussion}\label{discussion}}
+Overall, the value of this overlapping algorithm is that it provides a similarity measurement between the parameter posterior distributions. The measure indicates the impact of data availability, and choice of indicators, on the fitting process. Potentially, this approach could have value during the validation stages of parameter fitting, as a means to explore teh relationships between data availability and parameter estimates.
+
+On reflection, it would also have been useful to highlight the prior distribution on the density graphs, just to confirm that the fitting process has been impacted by the available data. For example, some of the posterior densities for the death fraction (Epoch1), do look quite similar to the prior \(Beta(2,2)\) distribution that was specified as part of the stan inference model.
+
+Further research could combine additional fitting metrics to bear on this process. For example, the potential scale-reduction factor (\(\widehat{R}\)) \citep{https://doi.org/10.1002/sdr.1693} which compares within-chain variance (stationarity) to between-chain variance (mixing). This could provide further insights into how the overlap percentage could be used to indicate an acceptable level of similarity between posterior distributions. Also, the use of additional unsupervised machine learning methods such as clustering could be benefiical, as a way to explore further patterns in the data.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+In reflecting on the results, a valuable output (in additional to the visualisation and exploratory analysis), is the calculation of the overlapping metric, whic presents a similarity measure between the parameter estimates. The differences calculated indicate that the MCMC fitting process is sensitive to (1) the amount of data in a time series (e.g.~whether it is epoch one, two, or three), and (2) the number of indicators available for the process (combinations of cases, hospitalisations, and deaths). On the broader point, it also suggests that modellers must reflect on parameter estimates, and how the ranges can vary depending on the amount of data available. Overall, despite impressive technical advances in computational inference processes, parameter estimation remains a challenging task in system dynamics; the following quote seems as relevant today as it was in the early 2000s.
+
+\begin{quote}
+\ldots{} limitations in numerical data availability mean it is often impossible to estimate all parameters in a model.
+You must also develop the ability to estimate parameters judgmentally using expert opinion gleaned from
+interviews, workshops, archival materials, direct experience, and other methods.
+
+--- John D. Sterman \citep{StermanBook}
+\end{quote}
+
+\newpage
+
+\hypertarget{appendix-1---stan-model-for-chd-indicators}{%
+\section{Appendix 1 - Stan model for CHD Indicators}\label{appendix-1---stan-model-for-chd-indicators}}
+
+The following stan code was automatically generated by the package \texttt{readsdr} \citep{andrade_readsdr} based on the Stella XMILE file. It embeds the system dynamics model (functions block), and also adds code to calculate the incidence data (\texttt{delta\_x\_1}, \texttt{delta\_x\_2}, and \texttt{delta\_x\_3}), namely the earlier equations (17-19). The \texttt{model} block below comprises the parameters to be fitted, and also specifies the distributions for cases (C), hospitalisations (H), and deaths (D). A separate stan file (seven in total) was created for each unique combination of indicator (i.e., CHD, CH, CD, HD, C, H, and D).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ Code generated by the R package readsdr v0.}\DecValTok{2}\NormalTok{.}\FloatTok{0.9014}
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ See more info at github https}\SpecialCharTok{:}\ErrorTok{//}\NormalTok{github.com}\SpecialCharTok{/}\NormalTok{jandraor}\SpecialCharTok{/}\NormalTok{readsdr}
+
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ SEIR Model }\ControlFlowTok{in}\NormalTok{ stan, direct translation from XMILE via readsdr}
+\NormalTok{functions \{}
+\NormalTok{  vector }\FunctionTok{X\_model}\NormalTok{(real time, vector y, array[] real params) \{}
+\NormalTok{    vector[}\DecValTok{12}\NormalTok{] dydt;}
+\NormalTok{    real ER;}
+\NormalTok{    real RR;}
+\NormalTok{    real HR1;}
+\NormalTok{    real HR2;}
+\NormalTok{    real HR3;}
+\NormalTok{    real RRH;}
+\NormalTok{    real RRD;}
+\NormalTok{    real Lambda;}
+\NormalTok{    real TCI;}
+\NormalTok{    real THI;}
+\NormalTok{    real TDI;}
+\NormalTok{    real TIH;}
+\NormalTok{    real Checksum;}
+\NormalTok{    real IR;}
+\NormalTok{    ER }\OtherTok{=}\NormalTok{ y[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\FloatTok{0.5}\NormalTok{;}
+\NormalTok{    RR }\OtherTok{=}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{params[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{params[}\DecValTok{2}\NormalTok{])}\SpecialCharTok{*}\NormalTok{y[}\DecValTok{3}\NormalTok{]}\SpecialCharTok{*}\FloatTok{0.5}\NormalTok{;}
+\NormalTok{    HR1 }\OtherTok{=}\NormalTok{ params[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{params[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{*}\NormalTok{y[}\DecValTok{3}\NormalTok{]}\SpecialCharTok{*}\FloatTok{0.5}\NormalTok{;}
+\NormalTok{    HR2 }\OtherTok{=}\NormalTok{ y[}\DecValTok{5}\NormalTok{]}\SpecialCharTok{/}\NormalTok{(}\DecValTok{10}\SpecialCharTok{/}\FloatTok{3.0}\NormalTok{);}
+\NormalTok{    HR3 }\OtherTok{=}\NormalTok{ y[}\DecValTok{6}\NormalTok{]}\SpecialCharTok{/}\NormalTok{(}\DecValTok{10}\SpecialCharTok{/}\FloatTok{3.0}\NormalTok{);}
+\NormalTok{    RRH }\OtherTok{=}\NormalTok{ (}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{params[}\DecValTok{3}\NormalTok{])}\SpecialCharTok{*}\NormalTok{y[}\DecValTok{7}\NormalTok{]}\SpecialCharTok{/}\NormalTok{(}\DecValTok{10}\SpecialCharTok{/}\DecValTok{3}\NormalTok{);}
+\NormalTok{    RRD }\OtherTok{=}\NormalTok{ params[}\DecValTok{3}\NormalTok{]}\SpecialCharTok{*}\NormalTok{y[}\DecValTok{7}\NormalTok{]}\SpecialCharTok{/}\NormalTok{(}\DecValTok{10}\SpecialCharTok{/}\FloatTok{3.0}\NormalTok{);}
+\NormalTok{    Lambda }\OtherTok{=}\NormalTok{ params[}\DecValTok{4}\NormalTok{]}\SpecialCharTok{*}\NormalTok{y[}\DecValTok{3}\NormalTok{]}\SpecialCharTok{/}\FloatTok{1e+05}\NormalTok{;}
+\NormalTok{    TCI }\OtherTok{=}\NormalTok{ params[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{ER;}
+\NormalTok{    THI }\OtherTok{=}\NormalTok{ HR1;}
+\NormalTok{    TDI }\OtherTok{=}\NormalTok{ RRD;}
+\NormalTok{    TIH }\OtherTok{=}\NormalTok{ y[}\DecValTok{5}\NormalTok{]}\SpecialCharTok{+}\NormalTok{y[}\DecValTok{6}\NormalTok{]}\SpecialCharTok{+}\NormalTok{y[}\DecValTok{7}\NormalTok{];}
+\NormalTok{    Checksum }\OtherTok{=}\NormalTok{ y[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{+}\NormalTok{y[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{+}\NormalTok{y[}\DecValTok{3}\NormalTok{]}\SpecialCharTok{+}\NormalTok{TIH}\SpecialCharTok{+}\NormalTok{y[}\DecValTok{4}\NormalTok{]}\SpecialCharTok{+}\NormalTok{y[}\DecValTok{8}\NormalTok{]}\SpecialCharTok{+}\NormalTok{y[}\DecValTok{9}\NormalTok{];}
+\NormalTok{    IR }\OtherTok{=}\NormalTok{ y[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{*}\NormalTok{Lambda;}
+\NormalTok{    dydt[}\DecValTok{1}\NormalTok{] }\OtherTok{=} \SpecialCharTok{{-}}\NormalTok{IR;}
+\NormalTok{    dydt[}\DecValTok{2}\NormalTok{] }\OtherTok{=}\NormalTok{ IR}\SpecialCharTok{{-}}\NormalTok{ER;}
+\NormalTok{    dydt[}\DecValTok{3}\NormalTok{] }\OtherTok{=}\NormalTok{ ER}\SpecialCharTok{{-}}\NormalTok{RR}\SpecialCharTok{{-}}\NormalTok{HR1;}
+\NormalTok{    dydt[}\DecValTok{4}\NormalTok{] }\OtherTok{=}\NormalTok{ RR;}
+\NormalTok{    dydt[}\DecValTok{5}\NormalTok{] }\OtherTok{=}\NormalTok{ HR1}\SpecialCharTok{{-}}\NormalTok{HR2;}
+\NormalTok{    dydt[}\DecValTok{6}\NormalTok{] }\OtherTok{=}\NormalTok{ HR2}\SpecialCharTok{{-}}\NormalTok{HR3;}
+\NormalTok{    dydt[}\DecValTok{7}\NormalTok{] }\OtherTok{=}\NormalTok{ HR3}\SpecialCharTok{{-}}\NormalTok{RRH}\SpecialCharTok{{-}}\NormalTok{RRD;}
+\NormalTok{    dydt[}\DecValTok{8}\NormalTok{] }\OtherTok{=}\NormalTok{ RRH;}
+\NormalTok{    dydt[}\DecValTok{9}\NormalTok{] }\OtherTok{=}\NormalTok{ RRD;}
+\NormalTok{    dydt[}\DecValTok{10}\NormalTok{] }\OtherTok{=}\NormalTok{ TCI;}
+\NormalTok{    dydt[}\DecValTok{11}\NormalTok{] }\OtherTok{=}\NormalTok{ THI;}
+\NormalTok{    dydt[}\DecValTok{12}\NormalTok{] }\OtherTok{=}\NormalTok{ TDI;}
+\NormalTok{    return dydt;}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ Data }\ControlFlowTok{for}\NormalTok{ the calibration process}
+\NormalTok{data \{}
+\NormalTok{  int}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{1}\SpecialCharTok{\textgreater{}}\NormalTok{ n\_obs;}
+\NormalTok{  array[n\_obs] int C;}
+\NormalTok{  array[n\_obs] int H;}
+\NormalTok{  array[n\_obs] int D;}
+\NormalTok{  array[n\_obs] real ts;}
+\NormalTok{  vector[}\DecValTok{12}\NormalTok{] x0;}
+\NormalTok{\}}
+
+
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ Parameters to be fitted.}
+\NormalTok{parameters \{}
+\NormalTok{  real}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{0}\NormalTok{, upper }\OtherTok{=} \DecValTok{1}\SpecialCharTok{\textgreater{}}\NormalTok{ CF;}
+\NormalTok{  real}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{0}\NormalTok{, upper }\OtherTok{=} \DecValTok{1}\SpecialCharTok{\textgreater{}}\NormalTok{ HF;}
+\NormalTok{  real}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{0}\NormalTok{, upper }\OtherTok{=} \DecValTok{1}\SpecialCharTok{\textgreater{}}\NormalTok{ DF;}
+\NormalTok{  real}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{0}\SpecialCharTok{\textgreater{}}\NormalTok{ Beta\_Param;}
+\NormalTok{  real}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{0}\SpecialCharTok{\textgreater{}}\NormalTok{ inv\_phi1;}
+\NormalTok{  real}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{0}\SpecialCharTok{\textgreater{}}\NormalTok{ inv\_phi2;}
+\NormalTok{  real}\SpecialCharTok{\textless{}}\NormalTok{lower }\OtherTok{=} \DecValTok{0}\SpecialCharTok{\textgreater{}}\NormalTok{ inv\_phi3;}
+\NormalTok{\}}
+
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ Calling the SEIR model and extracting cases}
+\NormalTok{transformed parameters\{}
+\NormalTok{  array[n\_obs] vector[}\DecValTok{12}\NormalTok{] x; }\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ Output from the ODE solver}
+\NormalTok{  array[}\DecValTok{4}\NormalTok{] real params;}
+\NormalTok{  array[n\_obs] real delta\_x\_1;}
+\NormalTok{  array[n\_obs] real delta\_x\_2;}
+\NormalTok{  array[n\_obs] real delta\_x\_3;}
+\NormalTok{  real phi1;}
+\NormalTok{  real phi2;}
+\NormalTok{  real phi3;}
+\NormalTok{  phi1 }\OtherTok{=} \DecValTok{1} \SpecialCharTok{/}\NormalTok{ inv\_phi1;}
+\NormalTok{  phi2 }\OtherTok{=} \DecValTok{1} \SpecialCharTok{/}\NormalTok{ inv\_phi2;}
+\NormalTok{  phi3 }\OtherTok{=} \DecValTok{1} \SpecialCharTok{/}\NormalTok{ inv\_phi3;}
+\NormalTok{  params[}\DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{ CF;}
+\NormalTok{  params[}\DecValTok{2}\NormalTok{] }\OtherTok{=}\NormalTok{ HF;}
+\NormalTok{  params[}\DecValTok{3}\NormalTok{] }\OtherTok{=}\NormalTok{ DF;}
+\NormalTok{  params[}\DecValTok{4}\NormalTok{] }\OtherTok{=}\NormalTok{ Beta\_Param;}
+\NormalTok{  x }\OtherTok{=} \FunctionTok{ode\_rk45}\NormalTok{(X\_model, x0, }\DecValTok{0}\NormalTok{, ts, params);}
+\NormalTok{  delta\_x\_1[}\DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{  x[}\DecValTok{1}\NormalTok{, }\DecValTok{10}\NormalTok{] }\SpecialCharTok{{-}}\NormalTok{ x0[}\DecValTok{10}\NormalTok{] }\SpecialCharTok{+} \FloatTok{1e{-}5}\NormalTok{;}
+\NormalTok{  delta\_x\_2[}\DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{  x[}\DecValTok{1}\NormalTok{, }\DecValTok{11}\NormalTok{] }\SpecialCharTok{{-}}\NormalTok{ x0[}\DecValTok{11}\NormalTok{] }\SpecialCharTok{+} \FloatTok{1e{-}5}\NormalTok{;}
+\NormalTok{  delta\_x\_3[}\DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{  x[}\DecValTok{1}\NormalTok{, }\DecValTok{12}\NormalTok{] }\SpecialCharTok{{-}}\NormalTok{ x0[}\DecValTok{12}\NormalTok{] }\SpecialCharTok{+} \FloatTok{1e{-}5}\NormalTok{;}
+  \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\NormalTok{n\_obs}\DecValTok{{-}1}\NormalTok{) \{}
+\NormalTok{    delta\_x\_1[i }\SpecialCharTok{+} \DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{ x[i }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }\DecValTok{10}\NormalTok{] }\SpecialCharTok{{-}}\NormalTok{ x[i, }\DecValTok{10}\NormalTok{] }\SpecialCharTok{+} \FloatTok{1e{-}5}\NormalTok{;}
+\NormalTok{    delta\_x\_2[i }\SpecialCharTok{+} \DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{ x[i }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }\DecValTok{11}\NormalTok{] }\SpecialCharTok{{-}}\NormalTok{ x[i, }\DecValTok{11}\NormalTok{] }\SpecialCharTok{+} \FloatTok{1e{-}5}\NormalTok{;}
+\NormalTok{    delta\_x\_3[i }\SpecialCharTok{+} \DecValTok{1}\NormalTok{] }\OtherTok{=}\NormalTok{ x[i }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }\DecValTok{12}\NormalTok{] }\SpecialCharTok{{-}}\NormalTok{ x[i, }\DecValTok{12}\NormalTok{] }\SpecialCharTok{+} \FloatTok{1e{-}5}\NormalTok{;}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ The stan model, including priors.}
+\NormalTok{model \{}
+\NormalTok{  CF }\SpecialCharTok{\textasciitilde{}} \FunctionTok{beta}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{);}
+\NormalTok{  HF }\SpecialCharTok{\textasciitilde{}} \FunctionTok{beta}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{);}
+\NormalTok{  DF }\SpecialCharTok{\textasciitilde{}} \FunctionTok{beta}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{);}
+\NormalTok{  Beta\_Param }\SpecialCharTok{\textasciitilde{}} \FunctionTok{lognormal}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{);}
+\NormalTok{  inv\_phi1 }\SpecialCharTok{\textasciitilde{}} \FunctionTok{exponential}\NormalTok{(}\DecValTok{5}\NormalTok{);}
+\NormalTok{  inv\_phi2 }\SpecialCharTok{\textasciitilde{}} \FunctionTok{exponential}\NormalTok{(}\DecValTok{5}\NormalTok{);}
+\NormalTok{  inv\_phi3 }\SpecialCharTok{\textasciitilde{}} \FunctionTok{exponential}\NormalTok{(}\DecValTok{5}\NormalTok{);}
+\NormalTok{  C }\SpecialCharTok{\textasciitilde{}} \FunctionTok{neg\_binomial\_2}\NormalTok{(delta\_x\_1, phi1);}
+\NormalTok{  H }\SpecialCharTok{\textasciitilde{}} \FunctionTok{neg\_binomial\_2}\NormalTok{(delta\_x\_2, phi2);}
+\NormalTok{  D }\SpecialCharTok{\textasciitilde{}} \FunctionTok{neg\_binomial\_2}\NormalTok{(delta\_x\_3, phi3);}
+\NormalTok{\}}
+
+\SpecialCharTok{/}\ErrorTok{/}\NormalTok{ Values generated by fitting process.}
+\NormalTok{generated quantities \{}
+\NormalTok{  real log\_lik;}
+\NormalTok{  array[n\_obs] int sim\_C;}
+\NormalTok{  array[n\_obs] int sim\_H;}
+\NormalTok{  array[n\_obs] int sim\_D;}
+  
+  \SpecialCharTok{/}\ErrorTok{/}\NormalTok{ The negative binomial probability mass given location and precision.}
+\NormalTok{  log\_lik }\OtherTok{=} \FunctionTok{neg\_binomial\_2\_lpmf}\NormalTok{(C }\SpecialCharTok{|}\NormalTok{ delta\_x\_1, phi1)}\SpecialCharTok{+}
+            \FunctionTok{neg\_binomial\_2\_lpmf}\NormalTok{(H }\SpecialCharTok{|}\NormalTok{ delta\_x\_2, phi2)}\SpecialCharTok{+}
+            \FunctionTok{neg\_binomial\_2\_lpmf}\NormalTok{(D }\SpecialCharTok{|}\NormalTok{ delta\_x\_3, phi3);}
+  
+  \SpecialCharTok{/}\ErrorTok{/}\NormalTok{ Generate the three negative binomial variates}
+\NormalTok{  sim\_C }\OtherTok{=} \FunctionTok{neg\_binomial\_2\_rng}\NormalTok{(delta\_x\_1, phi1);}
+\NormalTok{  sim\_H }\OtherTok{=} \FunctionTok{neg\_binomial\_2\_rng}\NormalTok{(delta\_x\_2, phi2);}
+\NormalTok{  sim\_D }\OtherTok{=} \FunctionTok{neg\_binomial\_2\_rng}\NormalTok{(delta\_x\_3, phi3);}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{appendix-2---overall-script-to-run-the-inference-process}{%
+\section{Appendix 2 - Overall script to run the inference process}\label{appendix-2---overall-script-to-run-the-inference-process}}
+
+This code is the main script used to run the inference process. Using R's \texttt{tidyverse} tools \citep{ExploreR}, it stores all the runs in an RDS file which can be used for subsequent analysis.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(purrr)}
+\FunctionTok{library}\NormalTok{(glue)}
+\FunctionTok{library}\NormalTok{(lubridate)}
+
+\FunctionTok{source}\NormalTok{(}\StringTok{"R/02 estimate/Header.R"}\NormalTok{)}
+\NormalTok{get\_stamp }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(}\AttributeTok{sep=}\StringTok{" "}\NormalTok{)}
+\NormalTok{\{}
+\NormalTok{  lubridate}\SpecialCharTok{::}\FunctionTok{ymd\_hms}\NormalTok{(}\FunctionTok{Sys.time}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{str\_replace}\NormalTok{(}\StringTok{"UTC"}\NormalTok{,}\StringTok{""}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{str\_trim}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{str\_replace}\NormalTok{(}\StringTok{" "}\NormalTok{,sep)}
+\NormalTok{\}}
+
+\CommentTok{\# Get the data}
+\NormalTok{epi }\OtherTok{\textless{}{-}} \FunctionTok{get\_data}\NormalTok{(config}\SpecialCharTok{$}\NormalTok{G\_DATA)}
+
+\CommentTok{\# Configure factorial design}
+\NormalTok{exp }\OtherTok{\textless{}{-}} \FunctionTok{configure\_exp}\NormalTok{(config}\SpecialCharTok{$}\NormalTok{EPOCHS,}
+\NormalTok{                     config}\SpecialCharTok{$}\NormalTok{MEAS\_MODELS)}
+
+\CommentTok{\# Prepare readsdr stan measure models}
+\NormalTok{exp }\OtherTok{\textless{}{-}}\NormalTok{ exp }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{mutate}\NormalTok{(}\AttributeTok{FitData=}\FunctionTok{map}\NormalTok{(Epoch,}\SpecialCharTok{\textasciitilde{}}\FunctionTok{filter\_data}\NormalTok{(epi,.x)),}
+               \AttributeTok{MM\_readsdr=}\FunctionTok{map}\NormalTok{(Indicators,}\SpecialCharTok{\textasciitilde{}}\FunctionTok{get\_meas\_model}\NormalTok{(.x)))}
+
+\NormalTok{config}\SpecialCharTok{$}\NormalTok{RUN\_INFO }\OtherTok{\textless{}{-}} \FunctionTok{vector}\NormalTok{(}\AttributeTok{mode=}\StringTok{"list"}\NormalTok{,}\AttributeTok{length =} \FunctionTok{nrow}\NormalTok{(exp))}
+
+
+\CommentTok{\# Run stan fits for each experiment, store in new column}
+\NormalTok{exp }\OtherTok{\textless{}{-}}\NormalTok{ exp }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{mutate}\NormalTok{(}\AttributeTok{StanFit=}\FunctionTok{pmap}\NormalTok{(}\FunctionTok{list}\NormalTok{(ExpNumber,}
+\NormalTok{                                 IndCode,}
+\NormalTok{                                 Indicators,}
+\NormalTok{                                 FitData,}
+\NormalTok{                                 MM\_readsdr),}\SpecialCharTok{\textasciitilde{}}\NormalTok{\{}
+\NormalTok{          t1 }\OtherTok{\textless{}{-}} \FunctionTok{Sys.time}\NormalTok{()}
+\NormalTok{          start\_time }\OtherTok{\textless{}{-}} \FunctionTok{get\_stamp}\NormalTok{()}
+\NormalTok{          f }\OtherTok{\textless{}{-}} \FunctionTok{fit\_model}\NormalTok{(}\AttributeTok{XMILE\_FILE =}\NormalTok{ config}\SpecialCharTok{$}\NormalTok{G\_MODEL,}
+                        \AttributeTok{STAN\_FILE  =} \FunctionTok{str\_replace}\NormalTok{(config}\SpecialCharTok{$}\NormalTok{G\_STAN\_MODEL,}
+                                                 \StringTok{"SEIRH.stan"}\NormalTok{,}
+                                                 \FunctionTok{paste0}\NormalTok{(}\StringTok{"SEIRH\_"}\NormalTok{,..}\DecValTok{2}\NormalTok{,}\StringTok{".stan"}\NormalTok{)),}
+                        \AttributeTok{Exper      =}\NormalTok{ ..}\DecValTok{1}\NormalTok{,}
+                        \AttributeTok{Indicators =}\NormalTok{ ..}\DecValTok{3}\NormalTok{,}
+                        \AttributeTok{data       =}\NormalTok{ ..}\DecValTok{4}\NormalTok{,}
+                        \AttributeTok{meas\_model =}\NormalTok{ ..}\DecValTok{5}\NormalTok{)}
+\NormalTok{          diagnostic      }\OtherTok{\textless{}{-}}\NormalTok{ f}\SpecialCharTok{$}\FunctionTok{cmdstan\_diagnose}\NormalTok{()}
+\NormalTok{          diagnostic\_summ }\OtherTok{\textless{}{-}}\NormalTok{ f}\SpecialCharTok{$}\FunctionTok{diagnostic\_summary}\NormalTok{()}
+\NormalTok{          finish\_time }\OtherTok{\textless{}{-}} \FunctionTok{get\_stamp}\NormalTok{()}
+\NormalTok{          config}\SpecialCharTok{$}\NormalTok{RUN\_INFO[[..}\DecValTok{1}\NormalTok{]] }\OtherTok{\textless{}\textless{}{-}} \FunctionTok{list}\NormalTok{(}\AttributeTok{ExpNo=}\NormalTok{..}\DecValTok{1}\NormalTok{,}
+                                          \AttributeTok{Indicators=}\NormalTok{..}\DecValTok{2}\NormalTok{,}
+                                          \AttributeTok{Obs=}\FunctionTok{nrow}\NormalTok{(..}\DecValTok{3}\NormalTok{),}
+                                          \AttributeTok{Start\_Time=}\NormalTok{start\_time,}
+                                          \AttributeTok{Finish\_Time=}\NormalTok{finish\_time,}
+                                          \AttributeTok{Duration=}\FunctionTok{Sys.time}\NormalTok{()}\SpecialCharTok{{-}}\NormalTok{t1,}
+                                          \AttributeTok{Diagnostic=}\NormalTok{diagnostic,}
+                                          \AttributeTok{Diagnostic\_Summary=}\NormalTok{diagnostic\_summ)}
+\NormalTok{          f}
+\NormalTok{        \}))}
+
+
+\CommentTok{\# Save in RDS file}
+\NormalTok{STAMP }\OtherTok{\textless{}{-}} \FunctionTok{get\_stamp}\NormalTok{(}\StringTok{"\#"}\NormalTok{)}
+
+\NormalTok{fits }\OtherTok{\textless{}{-}} \FunctionTok{prepare\_data1}\NormalTok{(exp,config)}
+
+\NormalTok{rds\_file  }\OtherTok{\textless{}{-}} \FunctionTok{glue}\NormalTok{(}\StringTok{"data/estimates/\{config$DESC\}\_\{STAMP\}\_EP\{length(config$EPOCHS)\}\_MM\{length(config$MEAS\_MODELS)\}\_FITS.rds"}\NormalTok{)}
+
+
+\FunctionTok{saveRDS}\NormalTok{(fits,rds\_file)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{appendix-3---header.r-file}{%
+\section{Appendix 3 - Header.R file}\label{appendix-3---header.r-file}}
+
+Thsi script configures the runs and specifies (1) the source scripts for the SEIR model and data, (2) the epochs and (3) the indicator combinations.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{source}\NormalTok{(}\StringTok{"R/02 estimate/GenerateSamples.R"}\NormalTok{)}
+\FunctionTok{source}\NormalTok{(}\StringTok{"R/02 estimate/Data.R"}\NormalTok{)}
+\FunctionTok{source}\NormalTok{(}\StringTok{"R/02 estimate/PrepareData.R"}\NormalTok{)}
+
+\NormalTok{G\_DESC }\OtherTok{\textless{}{-}} \StringTok{"TEST"}
+
+
+\NormalTok{config }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\AttributeTok{G\_DATA        =} \StringTok{"data/SEIRH\_Beta.xlsx"}\NormalTok{,}
+               \AttributeTok{G\_MODEL       =} \StringTok{"models/SEIRH\_Beta.stmx"}\NormalTok{,}
+               \AttributeTok{G\_STAN\_MODEL  =} \StringTok{"models/stan/SEIRH.stan"}\NormalTok{,}
+               \AttributeTok{EPOCHS        =} \FunctionTok{c}\NormalTok{(}\StringTok{"Epoch1"}\NormalTok{,}\StringTok{"Epoch2"}\NormalTok{,}\StringTok{"Epoch3"}\NormalTok{),}
+               \AttributeTok{MEAS\_MODELS   =} \FunctionTok{list}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Cases"}\NormalTok{,}\StringTok{"Hospitalisations"}\NormalTok{,}\StringTok{"Deaths"}\NormalTok{),}
+                                    \FunctionTok{c}\NormalTok{(}\StringTok{"Cases"}\NormalTok{,}\StringTok{"Hospitalisations"}\NormalTok{),}
+                                    \FunctionTok{c}\NormalTok{(}\StringTok{"Cases"}\NormalTok{,}\StringTok{"Deaths"}\NormalTok{),}
+                                    \FunctionTok{c}\NormalTok{(}\StringTok{"Hospitalisations"}\NormalTok{,}\StringTok{"Deaths"}\NormalTok{),}
+                                    \FunctionTok{c}\NormalTok{(}\StringTok{"Cases"}\NormalTok{),}
+                                    \FunctionTok{c}\NormalTok{(}\StringTok{"Hospitalisations"}\NormalTok{),}
+                                    \FunctionTok{c}\NormalTok{(}\StringTok{"Deaths"}\NormalTok{)),}
+               \AttributeTok{DESC          =}\NormalTok{ G\_DESC)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{appendix-4---running-the-overlapping-analysis}{%
+\section{Appendix 4 - Running the overlapping analysis}\label{appendix-4---running-the-overlapping-analysis}}
+
+Here, we present one of the analysis scripts, which uses the \texttt{overlapping} package in R to generate a similarity measure between the posterior distributions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(overlapping)}
+\FunctionTok{library}\NormalTok{(purrr)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(tidyr)}
+\FunctionTok{library}\NormalTok{(ggpubr)}
+
+\NormalTok{FILE   }\OtherTok{\textless{}{-}} \StringTok{"data/estimates/TEST\_2024{-}02{-}28\#14:28:32\_EP3\_MM7\_FITS.rds"}
+\NormalTok{fits }\OtherTok{\textless{}{-}} \FunctionTok{readRDS}\NormalTok{(FILE)}
+
+\FunctionTok{object\_size}\NormalTok{(fits)}
+
+\NormalTok{all\_params }\OtherTok{\textless{}{-}}\NormalTok{ fits }\SpecialCharTok{\%\textgreater{}\%}
+               \FunctionTok{select}\NormalTok{(EpIndCode,Params) }\SpecialCharTok{\%\textgreater{}\%}
+               \FunctionTok{unnest}\NormalTok{(}\AttributeTok{cols =} \StringTok{"Params"}\NormalTok{)}
+
+\CommentTok{\# Prepare the data for pair{-}wise analysis for each parameter}
+
+\NormalTok{prep }\OtherTok{\textless{}{-}} \FunctionTok{map\_df}\NormalTok{(}\FunctionTok{list}\NormalTok{(}\StringTok{"CF"}\NormalTok{,}\StringTok{"HF"}\NormalTok{,}\StringTok{"DF"}\NormalTok{,}\StringTok{"Beta\_Param"}\NormalTok{),}\SpecialCharTok{\textasciitilde{}}\NormalTok{\{}
+\NormalTok{  x1 }\OtherTok{\textless{}{-}}\NormalTok{ all\_params }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{select}\NormalTok{(EpIndCode,SN,dplyr}\SpecialCharTok{::}\FunctionTok{matches}\NormalTok{(.x))}
+
+\NormalTok{  cf }\OtherTok{\textless{}{-}} \FunctionTok{pivot\_wider}\NormalTok{(x1,}\AttributeTok{names\_from=}\NormalTok{EpIndCode,}
+                       \AttributeTok{values\_from =}\NormalTok{ .x) }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Param=}\NormalTok{.x) }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{select}\NormalTok{(Param,}\FunctionTok{everything}\NormalTok{())}
+\NormalTok{  cf}
+\NormalTok{\}) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{group\_by}\NormalTok{(Param) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{nest}\NormalTok{()}
+
+\NormalTok{overlaps }\OtherTok{\textless{}{-}}\NormalTok{ prep }\SpecialCharTok{\%\textgreater{}\%}
+              \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Overlap=}\FunctionTok{map}\NormalTok{(data,}\SpecialCharTok{\textasciitilde{}}\NormalTok{\{}
+\NormalTok{                d }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(.x,}\SpecialCharTok{{-}}\NormalTok{SN)}
+\NormalTok{                exps }\OtherTok{\textless{}{-}} \FunctionTok{names}\NormalTok{(d)}
+\NormalTok{                cbs }\OtherTok{\textless{}{-}} \FunctionTok{combn}\NormalTok{(exps,}\DecValTok{2}\NormalTok{)}
+\NormalTok{                inputs }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\AttributeTok{From=}\NormalTok{cbs[}\DecValTok{1}\NormalTok{,],}
+                               \AttributeTok{To=}\NormalTok{cbs[}\DecValTok{2}\NormalTok{,])}
+
+\NormalTok{                over }\OtherTok{\textless{}{-}} \FunctionTok{map2\_df}\NormalTok{(inputs}\SpecialCharTok{$}\NormalTok{From,inputs}\SpecialCharTok{$}\NormalTok{To,}\SpecialCharTok{\textasciitilde{}}\NormalTok{\{}
+\NormalTok{                  v1 }\OtherTok{\textless{}{-}}\NormalTok{ d[,.x] }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{pull}\NormalTok{()}
+\NormalTok{                  v2 }\OtherTok{\textless{}{-}}\NormalTok{ d[,.y] }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{pull}\NormalTok{()}
+\NormalTok{                  ol }\OtherTok{\textless{}{-}} \FunctionTok{overlap}\NormalTok{(}\FunctionTok{list}\NormalTok{(v1,v2))}\SpecialCharTok{$}\NormalTok{OV}
+                  \FunctionTok{tibble}\NormalTok{(}\AttributeTok{From=}\NormalTok{.x,}\AttributeTok{To=}\NormalTok{.y,}\AttributeTok{Overlap=}\NormalTok{ol)}
+\NormalTok{                \})}
+                
+\NormalTok{                over}
+\NormalTok{              \})) }
+
+\NormalTok{oa }\OtherTok{\textless{}{-}}\NormalTok{ overlaps }\SpecialCharTok{\%\textgreater{}\%} 
+       \FunctionTok{select}\NormalTok{(Param,Overlap) }\SpecialCharTok{\%\textgreater{}\%} 
+       \FunctionTok{unnest}\NormalTok{(}\AttributeTok{cols=}\StringTok{"Overlap"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+       \FunctionTok{mutate}\NormalTok{(}\AttributeTok{From=}\FunctionTok{factor}\NormalTok{(From,}\AttributeTok{levels=}\NormalTok{fits}\SpecialCharTok{$}\NormalTok{EpIndCode),}
+              \AttributeTok{To=}\FunctionTok{factor}\NormalTok{(To,}\AttributeTok{levels=}\NormalTok{fits}\SpecialCharTok{$}\NormalTok{EpIndCode))}
+
+
+\NormalTok{s\_oa }\OtherTok{\textless{}{-}}\NormalTok{ oa }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{group\_by}\NormalTok{(From,To) }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{summarise}\NormalTok{(}\AttributeTok{Median=}\FunctionTok{median}\NormalTok{(Overlap),}
+                    \AttributeTok{Mean=}\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(Overlap),}\DecValTok{2}\NormalTok{),}
+                    \AttributeTok{Min=}\FunctionTok{min}\NormalTok{(Overlap),}
+                    \AttributeTok{Max=}\FunctionTok{max}\NormalTok{(Overlap))}
+
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(s\_oa,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{To,}\AttributeTok{y=}\NormalTok{From,}\AttributeTok{fill=}\NormalTok{Mean))}\SpecialCharTok{+}\FunctionTok{geom\_tile}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_gradient2}\NormalTok{(}\AttributeTok{midpoint =} \FloatTok{0.5}\NormalTok{,}\AttributeTok{mid=}\StringTok{"grey70"}\NormalTok{,}\AttributeTok{limits=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{geom\_text}\NormalTok{(}\FunctionTok{aes}\NormalTok{(To, From, }\AttributeTok{label=}\NormalTok{Mean), }\AttributeTok{colour =} \StringTok{"white"}\NormalTok{, }\AttributeTok{check\_overlap =} \ConstantTok{TRUE}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"top"}\NormalTok{,}
+        \AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{45}\NormalTok{,}\AttributeTok{hjust =} \DecValTok{1}\NormalTok{),}
+        \AttributeTok{panel.background =} \FunctionTok{element\_rect}\NormalTok{(}\AttributeTok{fill=}\StringTok{"white"}\NormalTok{),}
+        \AttributeTok{panel.grid=}\FunctionTok{element\_line}\NormalTok{(}\AttributeTok{colour=}\StringTok{"blue"}\NormalTok{,}\AttributeTok{linetype=}\DecValTok{3}\NormalTok{,}\AttributeTok{linewidth =} \FloatTok{0.3}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill=}\StringTok{"Mean overlap estimate"}\NormalTok{)}
+
+
+\NormalTok{sp\_oa }\OtherTok{\textless{}{-}}\NormalTok{ oa }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(From,To,Param) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{Median=}\FunctionTok{median}\NormalTok{(Overlap),}
+            \AttributeTok{Mean=}\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(Overlap),}\DecValTok{2}\NormalTok{),}
+            \AttributeTok{Min=}\FunctionTok{min}\NormalTok{(Overlap),}
+            \AttributeTok{Max=}\FunctionTok{max}\NormalTok{(Overlap))}
+
+\NormalTok{target }\OtherTok{\textless{}{-}} \StringTok{"HF"}
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{filter}\NormalTok{(sp\_oa,Param}\SpecialCharTok{==}\NormalTok{target),}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{To,}\AttributeTok{y=}\NormalTok{From,}\AttributeTok{fill=}\NormalTok{Mean))}\SpecialCharTok{+}\FunctionTok{geom\_tile}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_gradient2}\NormalTok{(}\AttributeTok{midpoint =} \FloatTok{0.5}\NormalTok{,}\AttributeTok{mid=}\StringTok{"grey70"}\NormalTok{,}\AttributeTok{limits=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{geom\_text}\NormalTok{(}\FunctionTok{aes}\NormalTok{(To, From, }\AttributeTok{label=}\NormalTok{Mean), }\AttributeTok{size=}\DecValTok{3}\NormalTok{,}\AttributeTok{colour =} \StringTok{"white"}\NormalTok{, }\AttributeTok{check\_overlap =} \ConstantTok{TRUE}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"top"}\NormalTok{,}
+        \AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{45}\NormalTok{,}\AttributeTok{hjust =} \DecValTok{1}\NormalTok{),}
+        \AttributeTok{panel.background =} \FunctionTok{element\_rect}\NormalTok{(}\AttributeTok{fill=}\StringTok{"white"}\NormalTok{),}
+        \AttributeTok{panel.grid=}\FunctionTok{element\_line}\NormalTok{(}\AttributeTok{colour=}\StringTok{"grey"}\NormalTok{,}\AttributeTok{linetype=}\DecValTok{3}\NormalTok{,}\AttributeTok{linewidth =} \FloatTok{0.3}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill=}\StringTok{"Mean overlap estimate"}\NormalTok{,}
+       \AttributeTok{subtitle=}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Parameter = "}\NormalTok{,target))}
+
+
+\CommentTok{\# Plot histograms to show the overlaps}
+\NormalTok{plots }\OtherTok{\textless{}{-}}\NormalTok{ prep }\SpecialCharTok{\%\textgreater{}\%}
+          \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Plots=}\FunctionTok{map2}\NormalTok{(Param,data,}\SpecialCharTok{\textasciitilde{}}\NormalTok{\{}
+            \FunctionTok{set.seed}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\NormalTok{            d }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(.y,}\SpecialCharTok{{-}}\NormalTok{SN)}
+\NormalTok{            rn }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\FunctionTok{ncol}\NormalTok{(d),}\DecValTok{4}\NormalTok{)}
+\NormalTok{            d }\OtherTok{\textless{}{-}}\NormalTok{ d }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(rn)}
+\NormalTok{            plots }\OtherTok{\textless{}{-}} \FunctionTok{final.plot}\NormalTok{(}\FunctionTok{as.list}\NormalTok{(d),}\AttributeTok{pairs=}\NormalTok{T)}\SpecialCharTok{+}\FunctionTok{labs}\NormalTok{(}\AttributeTok{subtitle=}\NormalTok{.x)}
+\NormalTok{          \}))}
+
+\NormalTok{p1 }\OtherTok{\textless{}{-}} \FunctionTok{ggarrange}\NormalTok{(}\AttributeTok{plotlist =}\NormalTok{ plots}\SpecialCharTok{$}\NormalTok{Plots)}
+\end{Highlighting}
+\end{Shaded}
+
 
 
 \bibliography{references.bib}

@@ -1,6 +1,7 @@
 library(dplyr)
 library(tidyr)
 library(ggpubr)
+library(purrr)
 
 params <- fits %>%
   select(ExpNumber,Epoch,IndCode,EpIndCode,Params) %>%

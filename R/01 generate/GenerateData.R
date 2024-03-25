@@ -31,14 +31,18 @@ syn <- sd_measurements(n_meas       = 1,
                             stop_time    = 100,
                             timestep     = 1/8,
                             integ_method = "euler") %>%
-       as_tibble()
+       as_tibble() %>%
+       mutate(var_name=factor(var_name,levels=c("cases","hosp","deaths")))
 
 # Plot the synthetic data
 ggplot(syn, aes(time, measurement,colour=var_name)) +
   geom_point(colour = "#7B92DC") +geom_line()+
-  facet_wrap(~var_name,scales = "free",ncol=3)+
+  facet_wrap(~var_name,scales = "free",ncol=1)+
   labs(x = "Day", y = "People per day") +
-  theme_classic()
+  theme_classic()+
+  geom_vline(xintercept = 33)+
+  geom_vline(xintercept = 67)+
+  theme(legend.position="none")
 
 wide_syn <- syn %>%
              select(-iter) %>%

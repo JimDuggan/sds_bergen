@@ -47,7 +47,32 @@ q2 <- params %>%
             Q_0.975=round(quantile(Value,0.975),3),
             Q95Range=round(Q_0.975-Q_0.025,3)) %>%
   ungroup() %>%
-  select(Epoch,Parameter,IndCode,Q95Range) %>%
+  select(Epoch,IndCode,Parameter,Median,Q95Range) %>%
   arrange(Parameter,Q95Range)
+
+r_q2_epoch <- q2 %>%
+               group_by(Parameter,Epoch) %>%
+               mutate(RankEpoch=rank(Q95Range)) %>%
+               arrange(Parameter,Epoch,RankEpoch) %>%
+               ungroup()
+
+av_rank_epoch <- r_q2_epoch %>%
+                   group_by(Epoch,Parameter) %>%
+                   summarise(MinRank=min(RankEpoch),
+                             MaxRank=max(RankEpoch),
+                             MedRank=median(RankEpoch))
+                  
+
+
+r_q2_ind <- q2 %>%
+  group_by(Parameter,IndCode) %>%
+  mutate(RankIndCode=rank(Q95Range)) %>%
+  arrange(Parameter,IndCode)
+
+av_rank_ind <- r_q2_ind %>%
+  group_by(IndCode,Parameter) %>%
+  summarise(MinRank=min(RankIndCode),
+            MaxRank=max(RankIndCode),
+            MedRank=median(RankIndCode))
 
 

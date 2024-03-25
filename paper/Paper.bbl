@@ -1,25 +1,28 @@
 \begin{thebibliography}{10}
 
-\bibitem{vynnycky2010introduction}
-Vynnycky E, White R.
-\newblock An introduction to infectious disease modelling.
-\newblock OUP oxford; 2010.
+\bibitem{struben2015parameter}
+Struben J, Sterman J, Keith D.
+\newblock Parameter estimation through maximum likelihood and bootstrapping
+  methods.
+\newblock Analytical methods for dynamic modelers. 2015; p. 3--38.
 
-\bibitem{vynnycky2008analyses}
-Vynnycky E, Edmunds W.
-\newblock Analyses of the 1957 (Asian) influenza pandemic in the United Kingdom
-  and the impact of school closures.
-\newblock Epidemiology \& Infection. 2008;136(2):166--179.
+\bibitem{https://doi.org/10.1002/sdr.362}
+Dogan G.
+\newblock Bootstrapping for confidence interval estimation and hypothesis
+  testing for parameters of system dynamics models.
+\newblock System Dynamics Review. 2007;23(4):415--436.
+\newblock doi:{https://doi.org/10.1002/sdr.362}.
 
-\bibitem{duggan2016system}
-Duggan J.
-\newblock System dynamics modeling with R.
-\newblock Springer; 2016.
+\bibitem{https://doi.org/10.1002/sdr.1501}
+Pierson K, Sterman JD.
+\newblock Cyclical dynamics of airline industry earnings.
+\newblock System Dynamics Review. 2013;29(3):129--156.
+\newblock doi:{https://doi.org/10.1002/sdr.1501}.
 
-\bibitem{carpenter2017stan}
-Carpenter B, Gelman A, Hoffman MD, Lee D, Goodrich B, Betancourt M, et~al.
-\newblock Stan: A probabilistic programming language.
-\newblock Journal of statistical software. 2017;76.
+\bibitem{osgood2015combining}
+Osgood ND, Liu J.
+\newblock Combining Markov chain Monte Carlo approaches and dynamic modeling.
+\newblock Analytical methods for dynamic modelers. 2015; p. 125--169.
 
 \bibitem{https://doi.org/10.1002/sdr.1693}
 Andrade J, Duggan J.
@@ -42,6 +45,53 @@ Andrade J, Duggan J.
   delays.
 \newblock Royal Society Open Science. 2023;10(8):230515.
 \newblock doi:{10.1098/rsos.230515}.
+
+\bibitem{https://doi.org/10.1002/sdr.1673}
+Rahmandad H, Lim TY, Sterman J.
+\newblock Behavioral dynamics of COVID-19: estimating underreporting, multiple
+  waves, and adherence fatigue across 92 nations.
+\newblock System Dynamics Review. 2021;37(1):5--31.
+\newblock doi:{https://doi.org/10.1002/sdr.1673}.
+
+\bibitem{10.1371/journal.pcbi.1010100}
+Rahmandad H, Xu R, Ghaffarzadegan N.
+\newblock Enhancing long-term forecasting: Learning from COVID-19 models.
+\newblock PLOS Computational Biology. 2022;18(5):1--15.
+\newblock doi:{10.1371/journal.pcbi.1010100}.
+
+\bibitem{PolicyEPI}
+Jit M, Ainslie K, Althaus C, Caetano C, Colizza V, Paolotti D, et~al.
+\newblock Reflections On Epidemiological Modeling To Inform Policy During The
+  COVID-19 Pandemic In Western Europe, 2020–23.
+\newblock Health Affairs. 2023;42(12):1630--1636.
+\newblock doi:{10.1377/hlthaff.2023.00688}.
+
+\bibitem{vynnycky2010introduction}
+Vynnycky E, White R.
+\newblock An introduction to infectious disease modelling.
+\newblock OUP oxford; 2010.
+
+\bibitem{vynnycky2008analyses}
+Vynnycky E, Edmunds W.
+\newblock Analyses of the 1957 (Asian) influenza pandemic in the United Kingdom
+  and the impact of school closures.
+\newblock Epidemiology \& Infection. 2008;136(2):166--179.
+
+\bibitem{duggan2016system}
+Duggan J.
+\newblock System dynamics modeling with R.
+\newblock Springer; 2016.
+
+\bibitem{ExploreR}
+Duggan J.
+\newblock Exploring Operations Research with R.
+\newblock Chapman and Hall/CRC.; 2024.
+\newblock Available from: \url{https://doi.org/10.1201/9781003293910}.
+
+\bibitem{carpenter2017stan}
+Carpenter B, Gelman A, Hoffman MD, Lee D, Goodrich B, Betancourt M, et~al.
+\newblock Stan: A probabilistic programming language.
+\newblock Journal of statistical software. 2017;76.
 
 \bibitem{gabry2021cmdstanr}
 Gabry J.
@@ -66,5 +116,10 @@ Pastore M, Calcagnì A.
   Distribution-Free Overlapping Index.
 \newblock Frontiers in Psychology. 2019;10.
 \newblock doi:{10.3389/fpsyg.2019.01089}.
+
+\bibitem{StermanBook}
+Sterman J.
+\newblock Business Dynamics: Systems Thinking and Modeling for a Complex World.
+\newblock McGraw-Hill; 2000.
 
 \end{thebibliography}
