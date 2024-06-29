@@ -70,11 +70,12 @@ fit_model <- function(XMILE_FILE,
                       iter_warmup = 1000,
                       iter_sampling = 1000,
                       refresh         = 100,
-                      save_warmup     = FALSE)
+                      save_warmup     = FALSE,
+                      NEW_STAN_FILE = TRUE)
   {
   
   start_time <- lubridate::as_datetime(Sys.time())
-
+  
   print(glue("Reading XMILE file {XMILE_FILE}..."))
   mdl        <- read_xmile(XMILE_FILE)
   
@@ -98,8 +99,10 @@ fit_model <- function(XMILE_FILE,
                         estimated_params = priors)
   
   # Write the stan file
-  print(glue("Writing stan file to {STAN_FILE}..."))
-  write_file(stan_file, file = STAN_FILE)
+  if(NEW_STAN_FILE == TRUE){
+     print(glue("Writing stan file to {STAN_FILE}..."))
+     write_file(stan_file, file = STAN_FILE)
+  }
   
   # Create the stan data object
   stan_d <- get_stan_d(Indicators,
